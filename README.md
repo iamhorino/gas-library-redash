@@ -20,5 +20,38 @@ function myFunction() {
 ```
 
 ## Example
+```sql:サンプルクエリ
+SELECT
+  id,
+  title,
+  body
+FROM
+  articles
+LIMIT
+  2
+```
+```js:GAS
+function myFunction() {
+  const api = "http://00.00.00.00/api/queries/00/results.csv";
+  const redash = Redash.create(api);
+  const result = redash.getResult();
+  const header = redash.getHeader();
+  const data = redash.getData();
+}
+```
+```js:Result
+[
+  ['id', 'title', 'body'],
+  [1, 'タイトル①', '内容①'],
+  [2, 'タイトル②', '内容②']
+],
+[
+  ['id', 'title', 'body']
+],
+[
+  [1, 'タイトル①', '内容①'],
+  [2, 'タイトル②', '内容②']
+]
+```
 
 ## Document
