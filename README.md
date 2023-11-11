@@ -20,7 +20,8 @@ function myFunction() {
 ```
 
 ## Example
-```sql:サンプルクエリ
+```sql
+-- サンプルクエリ
 SELECT
   id,
   title,
@@ -30,7 +31,8 @@ FROM
 LIMIT
   2
 ```
-```js:GAS
+```js
+// GAS
 function myFunction() {
   const api = "http://00.00.00.00/api/queries/00/results.csv";
   const redash = Redash.create(api);
@@ -39,7 +41,8 @@ function myFunction() {
   const data = redash.getData();
 }
 ```
-```js:Result
+```js
+// Result
 [
   ['id', 'title', 'body'],
   [1, 'タイトル①', '内容①'],
